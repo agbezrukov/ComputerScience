@@ -16,7 +16,7 @@ public class Task3 {
         int remainder10 = ruble % 10;
         int remainder100 = ruble % 100;
 
-        if(remainder10 == 0 || 5 <= remainder10 && remainder10 <= 9 || 11 <= remainder100 && remainder100 <= 19){
+        if (remainder10 == 0 || 5 <= remainder10 && remainder10 <= 9 || 11 <= remainder100 && remainder100 <= 19) {
             System.out.println(ruble + " рублей");
         } else if (2 <= remainder10 && remainder10 <= 4) {
             System.out.println(ruble + " рубля");
