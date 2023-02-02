@@ -8,7 +8,7 @@ public class Task2 {
 
         int number = 123;
         int remainder10 = number % 10;
-        if (remainder10 == 3){
+        if (remainder10 == 3 || remainder10 == -3){
             System.out.println("correct");
         } else{
             System.out.println("not correct");
