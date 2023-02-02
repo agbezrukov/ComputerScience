@@ -1,4 +1,4 @@
-package src.Lesson16;
+package src.lesson16;
 
 /**
  * Имеется целое число. Это число - сумма денег в рублях.
