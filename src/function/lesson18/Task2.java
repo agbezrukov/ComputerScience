@@ -1,4 +1,4 @@
-package src.lesson18;
+package src.function.lesson18;
 
 public class Task2 {
     public static void main(String[] args) {
