@@ -11,15 +11,15 @@ public class Task1 {
         System.out.println(factorialWhile(value));
     }
 
-    public static int factorialWhile(int value){
-    int result = 1;
-    int currentValue = 1;
+    public static int factorialWhile(int value) {
+        int result = 1;
+        int currentValue = 1;
 
-    while (currentValue <= value){
-        result *= currentValue;
-        currentValue++;
-    }
-return result;
+        while (currentValue <= value) {
+            result *= currentValue;
+            currentValue++;
+        }
+        return result;
     }
 
     public static int factorialFor(int value) {
