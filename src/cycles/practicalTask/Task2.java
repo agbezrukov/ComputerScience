@@ -16,8 +16,8 @@ public class Task2 {
 
         int result = 0;
 
-        for (int i = 0; i < value; value /= 10) {
-            result += value % 10;
+        for (int i = 0, currentValue = value; i < currentValue; currentValue /= 10) {
+            result += currentValue % 10;
         }
         return result;
     }
