@@ -12,11 +12,13 @@ public class Task2 {
 
     public static void main(String[] args) {
         int value = 1234567;
+
         System.out.println(isFlipNumber(value));
     }
 
     public static int isFlipNumber(int value) {
         int result = 0;
+
         for (int i = 0, number = value; i < number; number /= 10) {
             result *= 10;
             result += (number % 10);
