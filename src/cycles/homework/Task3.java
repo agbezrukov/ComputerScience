@@ -21,44 +21,37 @@ public class Task3 {
         double percentBroker = 0.1;
         int year = 3;
         int month = 2;
+        int allMonth = isSumYearInMonth(year, month);
 
-        System.out.println(isAccountBalance(salary, isSumYearInMonth(year, month), percentBroker));
+        System.out.println(isAccountBalance(salary, allMonth, percentBroker));
+        System.out.println(isAccountBalanceBroker(salary, allMonth, percentBroker, percentProfitBroker));
 
     }
 
     public static double isAccountBalance(double salary, int month, double percent) {
-
         double result = 0;
         double sum = salary;
-        double wasteMoney = 300;
-
-        for (int i = 0; i < month; i++) {
-
-            if (i == 6) {
+        double wasteMoney = 300.0;
+        for (int i = 1; i <= month; i++) {
+            if (i % 6 == 0) {
                 sum += 400;
             }
-
-            result += (sum - (sum * percent) - wasteMoney);
-
+            double payToBroker = sum * percent;
+            result += (sum - payToBroker - wasteMoney);
         }
         return result;
     }
 
-    public static double isAccountBalanceBroker(double salary, int month, double percent) {
-
+    public static double isAccountBalanceBroker(double salary, int month, double percent, double percentProfit) {
         double result = 0;
         double sum = salary;
-
-
-        for (int i = 0; i < month; i++) {
-
-            if (i == 6) {
+        for (int i = 1; i <= month; i++) {
+            if (i % 6 == 0) {
                 sum += 400;
             }
-
-            result += sum;
-            result += result * percent;
-
+            double sumBroker = sum * percent;
+            result += sumBroker;
+            result += result * percentProfit;
         }
         return result;
     }
