@@ -17,11 +17,7 @@ public class Task1 {
 
     public static void main(String[] args) {
         int[] values = {3, 5, -6, 3, 2, -9, 0, -123};
-        printArray1D(removeNegativeNumbers(values));
-    }
-
-    private static void printArray1D(int[] values) {
-        System.out.println(Arrays.toString(values));
+        System.out.println(Arrays.toString(removeNegativeNumbers(values)));
     }
 
     private static int[] removeNegativeNumbers(int[] values) {
@@ -48,7 +44,7 @@ public class Task1 {
 
     private static int[] multiplyByFive(int[] values) {
         for (int i = 0; i < values.length; i++) {
-            values[i] *= 5;
+            values[i] *= values.length;
         }
         return values;
     }
