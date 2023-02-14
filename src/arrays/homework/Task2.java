@@ -11,17 +11,13 @@ package src.arrays.homework;
  */
 public class Task2 {
     public static void main(String[] args) {
-
         char[] values = {'a', '6', 'y', 'P', 'T', 'q', '9', '+'};
-
         isArrayNumbers(values);
     }
 
-    private static void isArrayNumbers(char[] values) {
-
+    private static void printArrayNumbers(char[] values) {
         int sumArray = sumArray(values);
         int average = isAverage(sumArray, values.length);
-
         for (char value : values) {
             if (value > average) {
                 System.out.println(value + " - " + (int) value);
@@ -30,9 +26,7 @@ public class Task2 {
     }
 
     private static int sumArray(char[] values) {
-
         int sumArray = 0;
-
         for (char value : values) {
             sumArray += (int) value;
         }
