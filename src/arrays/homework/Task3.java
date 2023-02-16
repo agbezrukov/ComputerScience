@@ -1,6 +1,5 @@
 package src.arrays.homework;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 /**
