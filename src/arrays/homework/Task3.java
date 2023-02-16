@@ -40,17 +40,17 @@ public class Task3 {
 
         for (int i = 0; i < array.length; i++) {
             if (i == 0) {
-                array[i] = isNegativeArray(values);
+                array[i] = getNegativeArray(values);
             } else if (i == 1) {
-                array[i] = isZeroArray(values);
+                array[i] = getZeroArray(values);
             } else {
-                array[i] = isPositiveArray(values);
+                array[i] = getPositiveArray(values);
             }
         }
         return array;
     }
 
-    private static int[] isPositiveArray(int[] values) {
+    private static int[] getPositiveArray(int[] values) {
 
         int[] array = new int[calculatePositiveArraySize(values)];
         int index = 0;
@@ -64,7 +64,7 @@ public class Task3 {
         return array;
     }
 
-    private static int[] isNegativeArray(int[] values) {
+    private static int[] getNegativeArray(int[] values) {
 
         int[] array = new int[calculateNegativeArraySize(values)];
         int index = 0;
@@ -78,15 +78,14 @@ public class Task3 {
         return array;
     }
 
-    private static int[] isZeroArray(int[] values) {
+    private static int[] getZeroArray(int[] values) {
 
         int[] array = new int[calculateZeroArraySize(values)];
         int index = 0;
 
         for (int i = 0; i < values.length; i++) {
             if (values[i] == 0) {
-                array[index] = values[i];
-                index++;
+                array[index++] = values[i];
             }
         }
         return array;
